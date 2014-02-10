@@ -212,23 +212,24 @@ class AdminpostsController extends BaseController
 		}
 		
 		$file = array_get($input, 'qqfile');
-		$filename = null;
-		if (is_array($file) && isset($file['tmp_name'])) {
-			$filename = $file['name'];
-			$file = $file['tmp_name'];
-		}
+		$filename = md5($file->getClientOriginalName()).'.'.$file->getClientOriginalExtension();
+		$uploadpath = $file->getPathname();
+		$filepath = 'blog-'.$blog_id.'/images/'.$filename;
 		
 		try {
-			// Create file.
-			// $file = full path to image file
-			// $filename name of image file
-			//...
+			Storage::upload($uploadpath, $filepath);
 		} catch (Exception $e) {
 			App::abort(500, "Error creating image ({$e->getMessage()}).");
 		}
 		
+		try {
+			$url = Storage::url($filepath);
+		} catch (Exception $e) {
+			App::abort(500, "Error getting image URL ({$e->getMessage()}).");
+		}
+		
 		return array(
-			'url' => 'http://www.craveonline.com/images/stories/2011/2012/August/Film/Dumb_and_Dumber.jpg',
+			'url' => $url,
 		);
 	}
 }
