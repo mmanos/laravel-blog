@@ -21,9 +21,7 @@ class BlogServiceProvider extends ServiceProvider {
 		$this->package('mmanos/laravel-blog');
 		
 		// Register routes.
-		\Route::any('blogadmin/{blog_id}/posts/qq', 'AdminpostsController@qq');
-		\Route::get('blogadmin/{blog_id}/posts/namecheck/{name}', 'AdminpostsController@namecheck');
-		\Route::resource('blogadmin.posts', 'AdminpostsController');
+		include __DIR__.'/../../routes.php';
 	}
 
 	/**
