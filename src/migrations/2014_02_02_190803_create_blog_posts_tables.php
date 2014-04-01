@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBlogTables extends Migration
+class CreateBlogPostsTables extends Migration
 {
 	/**
 	 * Run the migrations.
@@ -11,21 +11,6 @@ class CreateBlogTables extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('blogs', function ($table) {
-			$table->increments('id');
-			$table->string('title')->nullable();
-			$table->text('description')->nullable();
-			$table->string('creator_id');
-			$table->timestamps();
-			$table->softDeletes();
-			
-			$table->index(array('deleted_at', 'created_at'), 'newest_blogs');
-			$table->index(array('deleted_at', 'title', 'created_at'), 'alpha_blogs');
-			
-			$table->index(array('creator_id', 'deleted_at', 'created_at'), 'newest_user_blogs');
-			$table->index(array('creator_id', 'deleted_at', 'title', 'created_at'), 'alpha_user_blogs');
-		});
-		
 		Schema::create('blog_posts', function ($table) {
 			$table->increments('id');
 			$table->integer('blog_id');
@@ -60,7 +45,6 @@ class CreateBlogTables extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('blogs');
 		Schema::drop('blog_posts');
 	}
 }
