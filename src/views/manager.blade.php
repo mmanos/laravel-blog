@@ -77,55 +77,54 @@ Casset::add('laravel-blog::/public/js/manager/collections/posts.js');
 	</div>
 	
 	<div id="editpage" style="display:none;">
-			<div id="editor-top">
-				<?php echo Form::text('title', '', array('id' => 'editor-title', 'class' => 'form-control', 'placeholder' => 'Enter title here')); ?>
-				
-				<div id="permalink-wrapper" class="pull-left" style="display:none;">
-					<strong>Permalink:</strong>
-					/<span id="permalink"></span>
-					<a href="javascript:void(0);" id="editor-btn-edit-permalink" class="btn btn-default btn-xs">Edit</a>
-				</div>
-				<div id="edit-permalink-wrapper" class="pull-left" style="display:none;">
-					<strong>Permalink:</strong>
-					/<?php echo Form::text('permalink', '', array('id' => 'editor-edit-permalink')); ?>
-					<a href="javascript:void(0);" id="editor-btn-save-permalink" class="btn btn-default btn-xs">Done</a>
-					<a href="javascript:void(0);" id="editor-btn-cancel-permalink">Cancel</a>
-				</div>
-				
-				<a href="javascript:void(0);" id="editor-btn-save" class="btn btn-primary btn-sm pull-right">Save</a>
-				
-				<div id="status-wrapper">
-					<input type="radio" name="status" value="draft" id="status-draft" /><label for="status-draft">Draft</label>
-					<input type="radio" name="status" value="active" id="status-published" /><label for="status-published">Published</label>
-				</div>
+		<div id="editor-top">
+			<?php echo Form::text('title', '', array('id' => 'editor-title', 'class' => 'form-control', 'placeholder' => 'Enter title here')); ?>
+			
+			<div id="permalink-wrapper" class="pull-left" style="display:none;">
+				<strong>Permalink:</strong>
+				/<span id="permalink"></span>
+				<a href="javascript:void(0);" id="editor-btn-edit-permalink" class="btn btn-default btn-xs">Edit</a>
+			</div>
+			<div id="edit-permalink-wrapper" class="pull-left" style="display:none;">
+				<strong>Permalink:</strong>
+				/<?php echo Form::text('permalink', '', array('id' => 'editor-edit-permalink')); ?>
+				<a href="javascript:void(0);" id="editor-btn-save-permalink" class="btn btn-default btn-xs">Done</a>
+				<a href="javascript:void(0);" id="editor-btn-cancel-permalink">Cancel</a>
 			</div>
 			
-			<div id="editor-wrapper">
-				<div class="box page-height">
-					<div class="actions">
-						<h4 class="pull-right">
-							<a href="http://daringfireball.net/projects/markdown/basics" target="_blank" title="Markdown Help">?</a>
-						</h4>
-						
-						<h4>Markdown</h4>
-					</div>
+			<a href="javascript:void(0);" id="editor-btn-save" class="btn btn-primary btn-sm pull-right">Save</a>
+			
+			<div id="status-wrapper">
+				<input type="radio" name="status" value="draft" id="status-draft" /><label for="status-draft">Draft</label>
+				<input type="radio" name="status" value="active" id="status-published" /><label for="status-published">Published</label>
+			</div>
+		</div>
+		
+		<div id="editor-wrapper">
+			<div class="box page-height">
+				<div class="actions">
+					<h4 class="pull-right">
+						<a href="http://daringfireball.net/projects/markdown/basics" target="_blank" title="Markdown Help">?</a>
+					</h4>
 					
-					<div id="editor">
-						<?php echo Form::textarea('content', '', array('id' => 'editor-content', 'class' => 'input-block-level')); ?>
-					</div>
+					<h4>Markdown</h4>
+				</div>
+				
+				<div id="editor">
+					<?php echo Form::textarea('content', '', array('id' => 'editor-content', 'class' => 'input-block-level')); ?>
 				</div>
 			</div>
-			
-			<div id="editor-preview-wrapper">
-				<div class="box page-height">
-					<div class="actions">
-						<h4 id="editor-wordcount" class="pull-right">0 words</h4>
-						
-						<h4>Preview</h4>
-					</div>
+		</div>
+		
+		<div id="editor-preview-wrapper">
+			<div class="box page-height">
+				<div class="actions">
+					<h4 id="editor-wordcount" class="pull-right">0 words</h4>
 					
-					<div id="editor-preview" class="section-scroll rendered-content"></div>
+					<h4>Preview</h4>
 				</div>
+				
+				<div id="editor-preview" class="section-scroll rendered-content"></div>
 			</div>
 		</div>
 	</div>
