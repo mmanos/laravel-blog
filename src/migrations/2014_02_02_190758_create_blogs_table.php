@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBlogsTables extends Migration
+class CreateBlogsTable extends Migration
 {
 	/**
 	 * Run the migrations.
