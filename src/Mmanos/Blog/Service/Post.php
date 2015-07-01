@@ -54,6 +54,10 @@ class Post
 			$post->parent_id = $options['parent_id'];
 		}
 		
+		if (!empty($options['category_id'])) {
+			$post->category_id = $options['category_id'];
+		}
+		
 		$post->save();
 		
 		return $post;
@@ -84,6 +88,10 @@ class Post
 		
 		if (isset($options['published'])) {
 			$post->published = (int) (bool) $options['published'];
+		}
+		
+		if (!empty($options['category_id'])) {
+			$post->category_id = $options['category_id'];
 		}
 		
 		$post->save();

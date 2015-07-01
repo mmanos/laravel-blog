@@ -10,6 +10,11 @@ class Blog extends \Eloquent
 		return $this->hasMany('\Mmanos\Blog\Post');
 	}
 	
+	public function categories()
+	{
+		return $this->hasMany('\Mmanos\Blog\Category');
+	}
+	
 	public function numPosts()
 	{
 		return Blog\Post::where('blog_id', '=', $this->id)->count();
