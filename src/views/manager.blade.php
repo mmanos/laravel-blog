@@ -3,27 +3,27 @@ if (empty($blog_id)) {
 	return;
 }
 
-Casset::add('laravel-blog::/public/css/manager.less');
+Casset::add('mmanos/laravel-blog::/public/css/manager.less');
 
-Casset::add('laravel-blog::/public/libs/multieditor/multieditor.js');
-Casset::add('laravel-blog::/public/libs/codemirror/lib/codemirror.css');
-Casset::add('laravel-blog::/public/libs/codemirror/lib/codemirror.js');
-Casset::add('laravel-blog::/public/libs/codemirror/mode/markdown/markdown.js');
-Casset::add('laravel-blog::/public/libs/multieditor/drivers/codemirror.js');
-Casset::add('laravel-blog::/public/libs/fineuploader/fineuploader.js');
-Casset::add('laravel-blog::/public/libs/fineuploader/jquery.fineuploader.js');
-Casset::add('laravel-blog::/public/libs/backbone/underscore.min.js');
-Casset::add('laravel-blog::/public/libs/backbone/backbone.min.js');
-Casset::add('laravel-blog::/public/libs/dateutil.js');
-Casset::add('laravel-blog::/public/libs/markdown/pagedown/converter.js');
+Casset::add('mmanos/laravel-blog::/public/libs/multieditor/multieditor.js');
+Casset::add('mmanos/laravel-blog::/public/libs/codemirror/lib/codemirror.css');
+Casset::add('mmanos/laravel-blog::/public/libs/codemirror/lib/codemirror.js');
+Casset::add('mmanos/laravel-blog::/public/libs/codemirror/mode/markdown/markdown.js');
+Casset::add('mmanos/laravel-blog::/public/libs/multieditor/drivers/codemirror.js');
+Casset::add('mmanos/laravel-blog::/public/libs/fineuploader/fineuploader.js');
+Casset::add('mmanos/laravel-blog::/public/libs/fineuploader/jquery.fineuploader.js');
+Casset::add('mmanos/laravel-blog::/public/libs/backbone/underscore.min.js');
+Casset::add('mmanos/laravel-blog::/public/libs/backbone/backbone.min.js');
+Casset::add('mmanos/laravel-blog::/public/libs/dateutil.js');
+Casset::add('mmanos/laravel-blog::/public/libs/markdown/pagedown/converter.js');
 
-Casset::add('laravel-blog::/public/js/manager/views/app.js');
-Casset::add('laravel-blog::/public/js/manager/views/viewpage.js');
-Casset::add('laravel-blog::/public/js/manager/views/post.js');
-Casset::add('laravel-blog::/public/js/manager/views/editpage.js');
+Casset::add('mmanos/laravel-blog::/public/js/manager/views/app.js');
+Casset::add('mmanos/laravel-blog::/public/js/manager/views/viewpage.js');
+Casset::add('mmanos/laravel-blog::/public/js/manager/views/post.js');
+Casset::add('mmanos/laravel-blog::/public/js/manager/views/editpage.js');
 
-Casset::add('laravel-blog::/public/js/manager/models/post.js');
-Casset::add('laravel-blog::/public/js/manager/collections/posts.js');
+Casset::add('mmanos/laravel-blog::/public/js/manager/models/post.js');
+Casset::add('mmanos/laravel-blog::/public/js/manager/collections/posts.js');
 
 ?>
 
