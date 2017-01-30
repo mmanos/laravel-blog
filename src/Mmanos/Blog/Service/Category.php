@@ -52,18 +52,18 @@ class Category
 	public static function update(\Mmanos\Blog\Category $category, array $options = array())
 	{
 		if (!empty($options['title'])) {
-			$post->title = $options['title'];
+			$category->title = $options['title'];
 		}
 		
 		if (!empty($options['description'])) {
-			$blog->description = $options['description'];
+			$category->description = $options['description'];
 		}
 		
 		if (!empty($options['name'])) {
-			$post->name = $options['name'];
+			$category->name = $options['name'];
 		}
 		
-		$post->save();
+		$category->save();
 	}
 	
 	/**
